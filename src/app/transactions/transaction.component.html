@@ -1,0 +1,31 @@
+<mat-card class="transactions-card">
+  <form #transForm="ngForm" (submit)="onLogin(transForm)">
+    <mat-form-field>
+      <!-- <mat-label>Select team member</mat-label>
+      <mat-select ngModel name="username" #userInput="ngModel">
+        <mat-option *ngFor="let user of users" [value]="user.username">
+          {{user.username}}
+        </mat-option>
+      </mat-select> -->
+      <input type="text" matInput ngModel name="transname" placeholder="Transaction Name" #transnameInput="ngModel" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input type="number" matInput ngModel name="amount" placeholder="Amount" #amountInput="ngModel" required>
+        <mat-error *ngIf="amountInput.invalid">Please enter valid amount</mat-error>
+    </mat-form-field>
+    <div class="checkboxes">
+      <mat-checkbox class="credit" required="!debitInput.value" ngModel name="credit" #creditInput="ngModel">Credit</mat-checkbox>
+      <mat-checkbox ngModel name="debit" #debitInput="ngModel" required="!creditInput.value">Debit</mat-checkbox>
+      <mat-error *ngIf="creditInput.invalid && debitInput.invalid">Please click on either of the transaction type</mat-error>
+    </div>
+    <mat-form-field>
+      <input ngModel matInput [matDatepicker]="picker" name="transDate" placeholder="Choose a date" #dateInput="ngModel" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput name="comments" ngModel placeholder="Additional Comments" #commentsInput="ngModel"></textarea>
+    </mat-form-field>
+    <button mat-button mat-stroked-button color="accent" type="submit">Submit</button>
+</form>
+</mat-card>

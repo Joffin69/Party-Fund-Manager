@@ -1,0 +1,19 @@
+.transactions-card {
+  margin-top: 5em;
+  margin-left: 12px;
+  /* width: 60%;
+  margin: auto; */
+}
+
+mat-form-field {
+  width:100%
+}
+
+.credit {
+  margin-right: 12px;
+}
+
+.checkboxes {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

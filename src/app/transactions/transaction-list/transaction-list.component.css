@@ -1,0 +1,27 @@
+.transaction-container {
+  height: 450px;
+  margin-top: 5em;
+  margin-left: 12px;
+}
+
+.transClass {
+  width: 100%;
+}
+
+.mat-header-cell {
+  width: 28% !important;
+  font-size: 17px;
+}
+
+.footer {
+  font-weight: bold;
+}
+
+.make-red .mat-cell{
+  color: red !important;
+}
+
+.info-text {
+  margin-top: 5em;
+  text-align: center;
+}

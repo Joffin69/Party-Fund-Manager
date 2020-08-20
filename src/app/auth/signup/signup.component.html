@@ -1,0 +1,25 @@
+<mat-card >
+  <form class="grid-container" style="display: grid;" [formGroup]="form" (submit)="onSubmit()">
+    <mat-form-field class="item1">
+      <input matInput type="text" formControlName="name" placeholder="Name">
+      <mat-error *ngIf="form.get('name').invalid">Please enter the name</mat-error>
+    </mat-form-field>
+    <mat-form-field class="item2">
+      <input matInput type="text" formControlName="title" placeholder="Title">
+      <mat-error *ngIf="form.get('title').invalid">Please enter the title</mat-error>
+    </mat-form-field>
+    <div class="item6 border" (click)="filePicker.click()">
+      <img  #fileImage class="image-preview" [src]="imagePreview" [alt]="form.value.title" />
+      <input [hidden]="true" type="file" #filePicker (change)="onImagePicked($event)">
+    </div>
+    <mat-form-field class="item3">
+      <input matInput type="password" formControlName="password" placeholder="Password">
+      <mat-error *ngIf="form.get('password').invalid">Please enter the password</mat-error>
+    </mat-form-field>
+    <mat-form-field class="item4">
+      <textarea matInput formControlName="content" placeholder="Description"></textarea>
+      <mat-error *ngIf="form.get('content').invalid">Please enter the description</mat-error>
+    </mat-form-field>
+    <button type="submit" class="item5" mat-button mat-stroked-button color="primary">Sign Up</button>
+  </form>
+</mat-card>

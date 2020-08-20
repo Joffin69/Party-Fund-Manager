@@ -1,0 +1,29 @@
+<mat-card class="user-card">
+  <mat-card-header>
+    <mat-card-title>{{user.name}}</mat-card-title>
+    <mat-card-subtitle>{{user.title}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider [inset]="true" class="divider"></mat-divider>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <div class="first-box">
+      <p><strong>About: </strong></p>
+      <p>{{user.content}}</p>
+      <p><strong>Hobbies: </strong></p>
+      <p> Read, out with friends, listen to music, draw and learn new things.</p>
+      <p><strong>Skills: </strong>
+        <span class="tags">html5</span>
+        <span class="tags">css3</span>
+        <span class="tags">jquery</span>
+        <span class="tags">bootstrap3</span>
+      </p>
+      <p class="due"><strong>Dues (if any):</strong><span> You are due of 2 month(s)</span></p>
+      <p><strong>Total contribution:</strong> $23589</p>
+    </div>
+  </mat-card-content>
+  <mat-divider [inset]="true"></mat-divider>
+  <mat-card-actions>
+    <button mat-button  mat-stroked-button color="primary">VIEW MONTHLY TRANSACTIONS</button>
+    <button mat-button  mat-stroked-button color="accent">EDIT PROFILE</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,43 @@
+.header {
+  background-color: darkslateblue;
+  color:whitesmoke;
+}
+
+.headerList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sideNavList {
+  display: block;
+  list-style: none;
+}
+
+.sideNavList li a {
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+mat-drawer {
+  width: 250px;
+}
+
+.drawerContent {
+  margin-top: 5em;
+  width: 70%;
+  margin: auto;
+}
+

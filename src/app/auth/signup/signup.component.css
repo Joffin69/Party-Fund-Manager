@@ -1,0 +1,69 @@
+mat-card {
+  margin-top: 5em;
+  margin-left: 12px;
+}
+
+.grid-container {
+  grid-template-columns: [first] 75% [second] 25% [end];
+  grid-template-rows: [row1-start] 15% [row1-end] 15% [third-line] 15% [fourth-line] auto [fifth-line] 15% [last-line];
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.item1 {
+  grid-column-start: first;
+  grid-column-end: second;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+ }
+
+.item2 {
+  grid-column-start: first;
+  grid-column-end: second;
+  grid-row-start: row1-end;
+  grid-row-end: third-line;
+}
+
+.item3 {
+  grid-column-start: first;
+  grid-column-end: second;
+  grid-row-start: third-line;
+  grid-row-end: fourth-line; }
+
+.item4 {
+  grid-column-start: first;
+  grid-column-end: end;
+  grid-row-start: fourth-line;
+  grid-row-end: fifth-line;
+  align-self: end;
+}
+
+.item5 {
+  grid-column-start: first;
+  grid-column-end: end;
+  grid-row-start: fifth-line;
+  grid-row-end: last-line;
+  align-self: end;
+  justify-self: start;
+}
+
+.item6 {
+  grid-column-start: second;
+  grid-column-end: end;
+  grid-row-start: row1-start;
+  grid-row-end: fourth-line;
+}
+
+.border {
+  border-color: black;
+  border-width: medium;
+  border-style: double;
+  cursor: pointer;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 100%;
+}
